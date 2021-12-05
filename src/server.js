@@ -22,6 +22,8 @@ const server = new ApolloServer({
   }),
 });
 
-server.listen().then(({ url }) => {
-  console.log(`giphy are magically coming from here ${url}`);
+server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+  console.log(`
+    🚀  Server is ready at ${url}
+  `);
 });
